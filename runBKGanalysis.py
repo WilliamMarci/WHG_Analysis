@@ -43,6 +43,10 @@ def mergeAndMasks(*masks):
     if len(masks) == 0:
         raise ValueError("At least one mask is required")
     
+    # 如果传入的是一个列表或元组，解包它
+    if len(masks) == 1 and isinstance(masks[0], (list, tuple)):
+        masks = masks[0]
+    
     merged_mask = masks[0]
     for mask in masks[1:]:
         merged_mask = merged_mask & mask
@@ -53,10 +57,15 @@ def mergeOrMasks(*masks):
     if len(masks) == 0:
         raise ValueError("At least one mask is required")
     
+    # 如果传入的是一个列表或元组，解包它
+    if len(masks) == 1 and isinstance(masks[0], (list, tuple)):
+        masks = masks[0]
+    
     merged_mask = masks[0]
     for mask in masks[1:]:
         merged_mask = merged_mask | mask  # Use | instead of 'or' for element-wise operation
     return merged_mask
+
 
 def mergeXorMasks(mask1, mask2):
     """
@@ -141,7 +150,7 @@ def goodLepton(events, pt_cut=10.0, eta_cut=2.5):
     
     return good_electron_mask, good_muon_mask
 
-def goodPhoton(events, pt_cut=0.0, eta_cut=2.5):
+def goodPhoton(events, pt_cut=10.0, eta_cut=2.5):
     """ select Photon with |eta| < etacut(2.5) and PT > ptcut(10.0) """
     Photon = ak.copy(events.Photon)
     exist_mask = ak.num(Photon, axis=1) > 0
@@ -392,7 +401,12 @@ def getHiggsFromDBjet(events):
     }, with_name="Momentum4D")
     
     return higgs
-
+def deltaR(obj1_eta, obj1_phi, obj2_eta, obj2_phi):
+    """Calculate delta R between two objects"""
+    delta_eta = obj1_eta - obj2_eta
+    delta_phi = fab(obj1_phi - obj2_phi)
+    
+    return np.sqrt(delta_eta**2 + delta_phi**2)
 def getHiggsPhotonDeltaR(events):
     ## calculate the delta R between Higgs and leading photon
     higgs = getHiggsFromDBjet(events)
@@ -405,7 +419,7 @@ def getHiggsPhotonDeltaR(events):
     photon1 = photons_padded[:, 0]
     delta_r = ak.where(
         has_photons & has_higgs,
-        higgs.delta_r(photon1),
+        deltaR(higgs.Eta, higgs.Phi, photon1.Eta, photon1.Phi),
         np.nan
     )
     return delta_r
@@ -416,8 +430,9 @@ print("[INIT] Utility functions loaded successfully!")
 def eventCut(events, name="default"):
     maskPhoton = goodPhoton(events)
     maskmisspt = missptOverCut(events, 30)
-    maskBjets = containOverBjet(events, 1)
+    maskBjets = containOverBjet(events, 2)
     maskLepTrig = leptonTrigger(events)
+    maskSingleLepTrig = singleLeptonTrigger(events)
     
     maskElec = tightElectron(events, 30)
     maskMuon = tightMuon(events, 26)
@@ -426,8 +441,9 @@ def eventCut(events, name="default"):
         maskPhoton, 
         maskmisspt, 
         maskBjets, 
-        maskLepTrig, 
-        maskLepPT
+        maskSingleLepTrig,
+        # maskLepTrig, 
+        # maskLepPT
     )
     merged_mask = mergeAndMasks(mask_list)
 
@@ -436,8 +452,8 @@ def eventCut(events, name="default"):
         efficiency = getEfficiency(mask, total_events=len(events))
         print(f"[CUTTER] {name} Mask efficiency: {efficiency:.2%}")
 
-    cutnum = countItem(merged_mask, True)
-    text= f"[CUTTER] {name} Before cut: {len(events)} events, After cut: {cutnum} events"
+    # cutnum = len(events[merged_mask])
+    text= f"[CUTTER] {name} Before cut: {len(events)} events, After cut: {len(events[merged_mask])} events"
     print(text)
     return merged_mask
 

@@ -12,6 +12,13 @@
 [CUTTER] Signal Mask efficiency: 25.70%
 [CUTTER] Signal Mask efficiency: 70.05%
 [CUTTER] Signal Before cut: 500000 events, After cut: 1568 events
+[GOODLEP] Processed 15580 electrons successfully
+[GOODLEP] Processed 19193 muons successfully
+[CUTTER] Signal2 Mask efficiency: 57.58%
+[CUTTER] Signal2 Mask efficiency: 45.92%
+[CUTTER] Signal2 Mask efficiency: 33.51%
+[CUTTER] Signal2 Mask efficiency: 14.97%
+[CUTTER] Signal2 Before cut: 220496 events, After cut: 5039 events
 [GOODLEP] Processed 12182 electrons successfully
 [GOODLEP] Processed 15771 muons successfully
 [CUTTER] Bkg1 Mask efficiency: 54.85%
@@ -44,6 +51,8 @@
 [SYSTEM] Starting event analysis...
 [ANALYZE] Analyzing events with cut: Signal
 [ANALYZE] Analyzed 1568 events with cut: Signal Done
+[ANALYZE] Analyzing events with cut: Signal2
+[ANALYZE] Analyzed 5039 events with cut: Signal2 Done
 [ANALYZE] Analyzing events with cut: Bkg1
 [ANALYZE] Analyzed 4144 events with cut: Bkg1 Done
 [ANALYZE] Analyzing events with cut: Bkg2
@@ -57,6 +66,9 @@
 [SAVE] Converting results to DataFrame...
 [SAVE] DataFrame saved to: data/analysis_Signal.parquet
 [SAVE] Shape: (1568, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Signal2.parquet
+[SAVE] Shape: (5039, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
 [SAVE] Converting results to DataFrame...
 [SAVE] DataFrame saved to: data/analysis_Bkg1.parquet
 [SAVE] Shape: (4144, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']

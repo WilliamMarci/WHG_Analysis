@@ -168,7 +168,8 @@ def main():
     主函数
     """
     # 文件路径 - 请根据实际情况修改
-    file_path = "samples/whg_lo_pp_vlh_decayed.root"
+    # file_path = "samples/whg_lo_pp_vlh_decayed.root"
+    file_path = "samples/signal2_lhe.root"
     
     print("LHE文件光子PT分布分析程序")
     print("=" * 50)
@@ -178,7 +179,7 @@ def main():
     
     if photon_pts is not None:
         # 绘制分布图
-        plot_photon_pt_distribution(photon_pts, "figures/photon_pt_distribution.png", pt_range=(0, 20))
+        plot_photon_pt_distribution(photon_pts, "figures/photon_pt_distribution.png", pt_range=(0, 40))
         
         # 保存数据
         # np.savetxt("photon_pt_data.txt", photon_pts, header="Photon_PT_GeV")

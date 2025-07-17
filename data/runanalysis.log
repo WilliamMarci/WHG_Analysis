@@ -1,0 +1,73 @@
+[INIT] Enhanced mask functions loaded successfully!
+[INIT] Functions loaded successfully
+[INIT] Utility functions loaded successfully!
+[INIT] Analysis functions loaded successfully!
+[SYSTEM] Starting background analysis...
+[SYSTEM] Background events loaded successfully!
+[SYSTEM] Starting event selection...
+[GOODLEP] Processed 151534 electrons successfully
+[GOODLEP] Processed 200031 muons successfully
+[CUTTER] Signal Mask efficiency: 8.11%
+[CUTTER] Signal Mask efficiency: 72.53%
+[CUTTER] Signal Mask efficiency: 25.70%
+[CUTTER] Signal Mask efficiency: 70.05%
+[CUTTER] Signal Before cut: 500000 events, After cut: 1568 events
+[GOODLEP] Processed 12182 electrons successfully
+[GOODLEP] Processed 15771 muons successfully
+[CUTTER] Bkg1 Mask efficiency: 54.85%
+[CUTTER] Bkg1 Mask efficiency: 64.73%
+[CUTTER] Bkg1 Mask efficiency: 41.12%
+[CUTTER] Bkg1 Mask efficiency: 22.98%
+[CUTTER] Bkg1 Before cut: 100000 events, After cut: 4144 events
+[GOODLEP] Processed 13642 electrons successfully
+[GOODLEP] Processed 17371 muons successfully
+[CUTTER] Bkg2 Mask efficiency: 55.80%
+[CUTTER] Bkg2 Mask efficiency: 62.35%
+[CUTTER] Bkg2 Mask efficiency: 20.49%
+[CUTTER] Bkg2 Mask efficiency: 25.41%
+[CUTTER] Bkg2 Before cut: 100000 events, After cut: 2042 events
+[GOODLEP] Processed 6056 electrons successfully
+[GOODLEP] Processed 7371 muons successfully
+[CUTTER] Bkg3 Mask efficiency: 56.77%
+[CUTTER] Bkg3 Mask efficiency: 29.78%
+[CUTTER] Bkg3 Mask efficiency: 1.43%
+[CUTTER] Bkg3 Mask efficiency: 11.54%
+[CUTTER] Bkg3 Before cut: 100000 events, After cut: 14 events
+[GOODLEP] Processed 12056 electrons successfully
+[GOODLEP] Processed 15349 muons successfully
+[CUTTER] Bkg4 Mask efficiency: 61.44%
+[CUTTER] Bkg4 Mask efficiency: 48.23%
+[CUTTER] Bkg4 Mask efficiency: 1.52%
+[CUTTER] Bkg4 Mask efficiency: 21.75%
+[CUTTER] Bkg4 Before cut: 100000 events, After cut: 76 events
+[SYSTEM] Event selection completed!
+[SYSTEM] Starting event analysis...
+[ANALYZE] Analyzing events with cut: Signal
+[ANALYZE] Analyzed 1568 events with cut: Signal Done
+[ANALYZE] Analyzing events with cut: Bkg1
+[ANALYZE] Analyzed 4144 events with cut: Bkg1 Done
+[ANALYZE] Analyzing events with cut: Bkg2
+[ANALYZE] Analyzed 2042 events with cut: Bkg2 Done
+[ANALYZE] Analyzing events with cut: Bkg3
+[ANALYZE] Analyzed 14 events with cut: Bkg3 Done
+[ANALYZE] Analyzing events with cut: Bkg4
+[ANALYZE] Analyzed 76 events with cut: Bkg4 Done
+[SYSTEM] Event analysis completed!
+[SYSTEM] Saving results...
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Signal.parquet
+[SAVE] Shape: (1568, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg1.parquet
+[SAVE] Shape: (4144, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg2.parquet
+[SAVE] Shape: (2042, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg3.parquet
+[SAVE] Shape: (14, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg4.parquet
+[SAVE] Shape: (76, 9), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy']
+[SYSTEM] Results saved successfully!
+[SYSTEM] Exiting background analysis script...

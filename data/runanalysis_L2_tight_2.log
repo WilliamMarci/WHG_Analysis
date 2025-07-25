@@ -1,0 +1,133 @@
+[INIT] Enhanced mask functions loaded successfully!
+[INIT] Functions loaded successfully
+[INIT] Utility functions loaded successfully!
+[INIT] Analysis functions loaded successfully!
+[SYSTEM] Starting background analysis...
+[SYSTEM] Background events loaded successfully!
+[SYSTEM] Starting event selection...
+[GOODLEP] Processed 151534 electrons successfully
+[GOODLEP] Processed 200031 muons successfully
+[CUTTER] Signal Mask efficiency: 5.82%
+[CUTTER] Signal Mask efficiency: 72.53%
+[CUTTER] Signal Mask efficiency: 25.70%
+[CUTTER] Signal Mask efficiency: 64.56%
+[CUTTER] Signal Before cut: 500000 events, After cut: 713 events
+[GOODLEP] Processed 15580 electrons successfully
+[GOODLEP] Processed 19193 muons successfully
+[CUTTER] Signal2 Mask efficiency: 39.57%
+[CUTTER] Signal2 Mask efficiency: 45.92%
+[CUTTER] Signal2 Mask efficiency: 33.51%
+[CUTTER] Signal2 Mask efficiency: 13.48%
+[CUTTER] Signal2 Before cut: 220496 events, After cut: 3074 events
+[GOODLEP] Processed 12182 electrons successfully
+[GOODLEP] Processed 15771 muons successfully
+[CUTTER] Bkg1 Mask efficiency: 42.24%
+[CUTTER] Bkg1 Mask efficiency: 64.73%
+[CUTTER] Bkg1 Mask efficiency: 41.12%
+[CUTTER] Bkg1 Mask efficiency: 20.98%
+[CUTTER] Bkg1 Before cut: 100000 events, After cut: 2901 events
+[GOODLEP] Processed 13642 electrons successfully
+[GOODLEP] Processed 17371 muons successfully
+[CUTTER] Bkg2 Mask efficiency: 41.71%
+[CUTTER] Bkg2 Mask efficiency: 62.35%
+[CUTTER] Bkg2 Mask efficiency: 20.49%
+[CUTTER] Bkg2 Mask efficiency: 23.45%
+[CUTTER] Bkg2 Before cut: 100000 events, After cut: 1369 events
+[GOODLEP] Processed 6056 electrons successfully
+[GOODLEP] Processed 7371 muons successfully
+[CUTTER] Bkg3 Mask efficiency: 35.65%
+[CUTTER] Bkg3 Mask efficiency: 29.78%
+[CUTTER] Bkg3 Mask efficiency: 1.43%
+[CUTTER] Bkg3 Mask efficiency: 10.14%
+[CUTTER] Bkg3 Before cut: 100000 events, After cut: 9 events
+[GOODLEP] Processed 12056 electrons successfully
+[GOODLEP] Processed 15349 muons successfully
+[CUTTER] Bkg4 Mask efficiency: 41.35%
+[CUTTER] Bkg4 Mask efficiency: 48.23%
+[CUTTER] Bkg4 Mask efficiency: 1.52%
+[CUTTER] Bkg4 Mask efficiency: 19.72%
+[CUTTER] Bkg4 Before cut: 100000 events, After cut: 45 events
+[SYSTEM] Event selection completed!
+[SYSTEM] Starting event analysis...
+[ANALYZE] Analyzing events with cut: Signal
+[ANALYZE] Analyzed 713 events with cut: Signal Done
+[ANALYZE] Analyzing events with cut: Signal2
+[ANALYZE] Analyzed 3074 events with cut: Signal2 Done
+[ANALYZE] Analyzing events with cut: Bkg1
+[ANALYZE] Analyzed 2901 events with cut: Bkg1 Done
+[ANALYZE] Analyzing events with cut: Bkg2
+[ANALYZE] Analyzed 1369 events with cut: Bkg2 Done
+[ANALYZE] Analyzing events with cut: Bkg3
+[ANALYZE] Analyzed 9 events with cut: Bkg3 Done
+[ANALYZE] Analyzing events with cut: Bkg4
+[ANALYZE] Analyzed 45 events with cut: Bkg4 Done
+[SYSTEM] Event analysis completed!
+[SYSTEM] Saving results...
+[CUTTER-L2] Applying cut: Signal
+[CUTTER-L2] Signal Before L2 cut: 713 events, After L2 cut: 505 events
+[CUTTER-L2] Applying cut: Signal2
+[CUTTER-L2] Signal2 Before L2 cut: 3074 events, After L2 cut: 2366 events
+[CUTTER-L2] Applying cut: Bkg1
+[CUTTER-L2] Bkg1 Before L2 cut: 2901 events, After L2 cut: 1281 events
+[CUTTER-L2] Applying cut: Bkg2
+[CUTTER-L2] Bkg2 Before L2 cut: 1369 events, After L2 cut: 769 events
+[CUTTER-L2] Applying cut: Bkg3
+[CUTTER-L2] Bkg3 Before L2 cut: 9 events, After L2 cut: 6 events
+[CUTTER-L2] Applying cut: Bkg4
+[CUTTER-L2] Bkg4 Before L2 cut: 45 events, After L2 cut: 34 events
+[SYSTEM] L2 event selection completed!
+[SYSTEM] Analyzing L2 events...
+[ANALYZE] Analyzing events with cut: Signal_L2
+[ANALYZE] Analyzed 505 events with cut: Signal_L2 Done
+[ANALYZE] Analyzing events with cut: Signal2_L2
+[ANALYZE] Analyzed 2366 events with cut: Signal2_L2 Done
+[ANALYZE] Analyzing events with cut: Bkg1_L2
+[ANALYZE] Analyzed 1281 events with cut: Bkg1_L2 Done
+[ANALYZE] Analyzing events with cut: Bkg2_L2
+[ANALYZE] Analyzed 769 events with cut: Bkg2_L2 Done
+[ANALYZE] Analyzing events with cut: Bkg3_L2
+[ANALYZE] Analyzed 6 events with cut: Bkg3_L2 Done
+[ANALYZE] Analyzing events with cut: Bkg4_L2
+[ANALYZE] Analyzed 34 events with cut: Bkg4_L2 Done
+[SYSTEM] L2 event analysis completed!
+[SYSTEM] Saving results...
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Signal_L2.parquet
+[SAVE] Shape: (505, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Signal2_L2.parquet
+[SAVE] Shape: (2366, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg1_L2.parquet
+[SAVE] Shape: (1281, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg2_L2.parquet
+[SAVE] Shape: (769, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg3_L2.parquet
+[SAVE] Shape: (6, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg4_L2.parquet
+[SAVE] Shape: (34, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SYSTEM] L2 results saved successfully!
+[SYSTEM] Saving initial results...
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Signal.parquet
+[SAVE] Shape: (713, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Signal2.parquet
+[SAVE] Shape: (3074, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg1.parquet
+[SAVE] Shape: (2901, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg2.parquet
+[SAVE] Shape: (1369, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg3.parquet
+[SAVE] Shape: (9, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SAVE] Converting results to DataFrame...
+[SAVE] DataFrame saved to: data/analysis_Bkg4.parquet
+[SAVE] Shape: (45, 13), Columns: ['W_mass', 'BB_mass', 'BBA_mass', 'Njet', 'dB_delta_r', 'dB_delta_eta', 'dB_delta_phi', 'bP_delta_r', 'photon_energy', 'photon_pt', 'aB_delta_r', 'aL_delta_r_lepton', 'fake_top_mass']
+[SYSTEM] Results saved successfully!
+[SYSTEM] Exiting background analysis script...
